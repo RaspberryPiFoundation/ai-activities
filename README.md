@@ -1,2 +1,2 @@
-# ai-examples
+# ai-activities
 Experience AI example resources
