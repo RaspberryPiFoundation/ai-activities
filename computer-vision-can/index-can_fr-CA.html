@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Vision par ordinateur</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </head>
+
+  <body>  
+    <main>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Vision par ordinateur</h1>
+            <p class="lead text-muted">Sélectionnez une image</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <a data-bs-toggle="collapse" href="#collapseCityscape" role="button" aria-expanded="false" aria-controls="collapseCityscape">
+              <img src="images/image1_can.jpeg" alt="Une vue pittoresque de la basse-ville du Vieux-Québec, au Canada, avec des bâtiments historiques aux façades colorées sous un ciel bleu clair." class="img-thumbnail">
+            </a>
+          </div>
+          <div class="col-sm">
+            <a data-bs-toggle="collapse" href="#collapseConstruction" role="button" aria-expanded="false" aria-controls="collapseConstruction">
+              <img src="images/image2_can.jpg" alt="Un ouvrier du bâtiment qui porte un casque jaune et un gilet de sécurité à haute visibilité se concentre sur son travail sur un chantier de construction. Il utilise un outil portatif, comme une perceuse ou un autre outil électrique similaire, avec concentration et précision. L’arrière-plan présente des matériaux de construction et une structure en cours de construction, mettant en évidence l’envirionnement industriel et les thèmes de la construction et de la sécurité." class="img-thumbnail">
+            </a>
+          </div>
+          <div class="col-sm">
+            <a data-bs-toggle="collapse" href="#collapseFruitAndVeg" role="button" aria-expanded="false" aria-controls="collapseFruitAndVeg">
+              <img src="images/image3_can.jpg" alt="Un assortiment coloré et vivant de fruits frais, soigneusement placés dans un panier en osier" class="img-thumbnail">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="container" id="collapseGroup">
+        <div class="row">
+          <div class="collapse mt-2" data-bs-parent="#collapseGroup" id="collapseCityscape">
+            <div class="card card-body">
+              <h2>Paysage urbain</h2>
+              
+              <img src="images/image1_scores_can.png" alt="Un tramway moderne circulant le long d’une rue de la ville de Timisoara, en Roumanie, sous un ciel bleu clair. Le tramway est photographié en mouvement, entouré d'une architecture urbaine avec des bâtiments bordant la rue. Des piétons sont visibles à proximité, contribuant ainsi à l'atmosphère urbaine animée" class="img-fluid w-75">
+              <div class="container mt-4">
+                
+                <div class="row">
+                  <div class="col-sm">
+                    <table class="table w-50">
+                      <tbody>
+                        <tr>
+                        <td><strong>Étiquette</strong></td>
+                        <td><strong>Confiance</strong></td>
+                      </tr>
+                        <tr>
+                          <td>Ville<sup>1</sup></td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Route</td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Urbain</td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Sac à main<sup>1</sup></td>
+                          <td>99%</td>
+                        </tr>
+                        <tr>
+                          <td>Feuillage</td>
+                          <td>98%</td>
+                        </tr>
+                        <tr>
+                          <td>Drapeau<sup>2</sup></td>
+                          <td>98%</td>
+                        </tr>
+                        <tr>
+                          <td>Trottoir<sup>7</sup></td>
+                          <td>98%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-sm">
+                    <table class="table w-50">
+                      <tbody>
+                        <tr>
+                          <td><strong>Étiquette</strong></td>
+                          <td><strong>Confiance</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Personne<sup>3</sup></td>
+                          <td>97%</td>
+                        </tr>
+                        <tr>
+                          <td>Voiture<sup>4</sup></td>
+                          <td>97%</td>
+                        </tr>
+                        <tr>
+                          <td>Chaussure<sup>5</sup></td>
+                          <td>92%</td>
+                        </tr>
+                        <tr>
+                          <td>Moto<sup>6</sup></td>
+                          <td>92%</td>
+                        </tr>
+                        <tr>
+                          <td>Lampe<sup>7</sup></td>
+                          <td>74%</td>
+                        </tr>
+                        <tr>
+                          <td>Plante<sup>8</sup></td>
+                          <td>70%</td>
+                        </tr>
+                        <tr>
+                          <td>Centre ville</td>
+                          <td>57%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--image source: https://pixabay.com/photos/canada-quebec-old-quebec-lower-town-1092352/-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapse mt-2" data-bs-parent="#collapseGroup" id="collapseConstruction">
+            <div class="card card-body">
+              <h2>Chantier de construction</h2>
+              
+              <img src="images/image2_scores_can.png" alt="Un ouvrier du bâtiment qui porte un casque jaune et un gilet de sécurité à haute visibilité se concentre sur son travail sur un chantier de construction. Il utilise un outil portatif, comme une perceuse ou un autre outil électrique similaire, avec concentration et précision. L’arrière-plan présente des matériaux de construction et une structure en cours de construction, mettant en évidence l’envirionnement industriel et les thèmes de la construction et de la sécurité" class="img-fluid w-75">
+              <div class="container mt-4">
+              
+                <div class="row">
+                  <div class="col-sm">
+                    <table class="table w-50">
+                      <tbody>
+                        <tr>
+                          <td><strong>Étiquette</strong></td>
+                          <td><strong>Confiance</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Personne<sup>3</sup></td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Casque de sécurité <sup>2</sup></td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Construction <sup>3</sup></td>
+                          <td>76%</td>
+                        </tr>
+                        <tr>
+                          <td>Adulte <sup>4</sup></td>
+                          <td>99%</td>
+                        </tr>
+                        <tr>
+                          <td>Homme <sup>5</sup></td>
+                          <td>99%</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-sm">
+                    <table class="table w-50">
+                      <tbody>
+                        <tr>
+                          <td><strong>Étiquette</strong></td>
+                          <td><strong>Confiance</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Camion <sup>6</sup></td>
+                          <td>88%</td>
+                        </tr>
+                        <tr>
+                          <td>Chaussures <sup>7</sup></td>
+                          <td>88%</td>
+                        </tr>
+                        <tr>
+                          <td>Roue <sup>8</sup></td>
+                          <td>83%</td>
+                        </tr>
+                        <tr>
+                          <td>Lunettes de protection</td>
+                          <td>94%</td>
+                        </tr>
+                        <tr>
+                          <td>Panneau de signalisation</td>
+                          <td>31%</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--image source: https://pixabay.com/photos/construction-worker-safety-2578410/-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapse mt-2" data-bs-parent="#collapseGroup" id="collapseFruitAndVeg">
+            <div class="card card-body">
+              <h2>Fruits et légumes</h2>
+              
+              <img src="images/image3_scores_can.png" alt="Un assortiment coloré et vivant de fruits frais, soigneusement placés dans un panier en osier." class="img-fluid w-75">
+              <div class="container mt-4">
+              
+                <div class="row">
+                  <div class="col-sm">
+                    <table class="table w-50">
+                      <tbody>
+                        <tr>
+                          <td><strong>Étiquette</strong></td>
+                          <td><strong>Confiance</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Banane <sup>1</sup></td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Fruit</td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Orange <sup>2</sup></td>
+                          <td>85%</td>
+                        </tr>
+                        <tr>
+                          <td>Poire <sup>3</sup></td>
+                          <td>84%</td>
+                        </tr>
+                        <tr>
+                          <td>Poulet <sup>4</sup></td>
+                          <td>78%</td>
+                        </tr>
+                        <tr>
+                          <td>Citron</td>
+                          <td>62%</td>
+                        </tr>
+                        <tr>
+                          <td>Pomme <sup>5</sup></td>
+                          <td>50%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-sm">
+                    <table class="table w-50">
+                      <tbody>
+                        <tr>
+                          <td><strong>Étiquette</strong></td>
+                          <td><strong>Confiance</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Panier</td>
+                          <td>55%</td>
+                        </tr>
+                        <tr>
+                          <td>Pamplemousse</td>
+                          <td>53%</td>
+                        </tr>
+                        <tr>
+                          <td>Poivron</td>
+                          <td>53%</td>
+                        </tr>
+                        <tr>
+                          <td>Citron vert</td>
+                          <td>52%</td>
+                        </tr>
+                        <tr>
+                          <td>Courgette</td>
+                          <td>52%</td>
+                        </tr>
+                        <tr>
+                          <td>Gingembre</td>
+                          <td>51%</td>
+                        </tr>
+                        <tr>
+                          <td>Avocat</td>
+                          <td>51%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+               <!--image source: https://pixabay.com/photos/fruit-basket-fresh-food-organic-5789565-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-end mb-1">
+          <a href="#">Retour en haut de page</a>
+        </p>
+        <p class="mb-1">Toutes les images sur cette page proviennent de <a href="https://pixabay.com/">Pixabay</a>. </p>
+        <p class="mb-0">Pour plus d'informations sur les conditions de licence de Pixabay, <a href="https://pixabay.com/service/license/">visitez cette page</a>.</p>
+        <p class="mb-0"><a href="https://imagerecognize.com/">IMAGE Reconnue</a> L'application en ligne a été utilisée pour classer les objets dans chaque image </p>
+      </div>
+    </footer>
+  </body>
+</html>
