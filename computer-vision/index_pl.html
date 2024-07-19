@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Przykłady widzenia komputerowego</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </head>
+
+  <body>  
+    <main>
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Widzenie komputerowe</h1>
+            <p class="lead text-muted">Wybierz obraz</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <a data-bs-toggle="collapse" href="#collapseCityscape" role="button" aria-expanded="false" aria-controls="collapseCityscape">
+              <img src="images/image1.jpg" alt="Tętniący życiem pejzaż miejski" class="img-thumbnail">
+            </a>
+          </div>
+          <div class="col-sm">
+            <a data-bs-toggle="collapse" href="#collapseConstruction" role="button" aria-expanded="false" aria-controls="collapseConstruction">
+              <img src="images/image2.jpg" alt="Pracownik budowy w żółtym kasku i kamizelce odblaskowej skupiony na swojej pracy na placu budowy." class="img-thumbnail">
+            </a>
+          </div>
+          <div class="col-sm">
+            <a data-bs-toggle="collapse" href="#collapseFruitAndVeg" role="button" aria-expanded="false" aria-controls="collapseFruitAndVeg">
+              <img src="images/image3.jpg" alt="Żywy i kolorowy zbiór różnorodnych, świeżych owoców starannie ułożonych w wiklinowym koszu." class="img-thumbnail">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="container" id="collapseGroup">
+        <div class="row">
+          <div class="collapse mt-2" data-bs-parent="#collapseGroup" id="collapseCityscape">
+            <div class="card card-body">
+              <h2>Pejzaż miejski</h2>
+              
+              <img src="images/image1_scores.png" alt="Tętniący życiem pejzaż miejski" class="img-fluid w-75">
+              <div class="container mt-4">
+                
+                <div class="row">
+                  <div class="col-sm">
+                    <table class="table w-50">
+                      <tbody>
+                        <tr>
+                        <td><strong>Etykieta</strong></td>
+                        <td><strong>Ufność</strong></td>
+                      </tr>
+                        <tr>
+                          <td>Miasto</td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Samochód <sup>1</sup></td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Sygnalizacja świetlna <sup>2</sup></td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Człowiek <sup>3</sup></td>
+                          <td>99%</td>
+                        </tr>
+                        <tr>
+                          <td>Wieża</td>
+                          <td>77%</td>
+                        </tr>
+                        <tr>
+                          <td>Koło <sup>4</sup></td>
+                          <td>76%</td>
+                        </tr>
+                        <tr>
+                          <td>Tablica rejestracyjna <sup>5</sup></td>
+                          <td>56%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-sm">
+                    <table class="table w-50">
+                      <tbody>
+                        <tr>
+                          <td><strong>Etykieta</strong></td>
+                          <td><strong>Ufność</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Ulica</td>
+                          <td>54%</td>
+                        </tr>
+                        <tr>
+                          <td>Droga</td>
+                          <td>54%</td>
+                        </tr>
+                        <tr>
+                          <td>Pieszy</td>
+                          <td>49%</td>
+                        </tr>
+                        <tr>
+                          <td>Przejście dla pieszych</td>
+                          <td>49%</td>
+                        </tr>
+                        <tr>
+                          <td>Autobus</td>
+                          <td>47%</td>
+                        </tr>
+                        <tr>
+                          <td>Przystanek autobusowy</td>
+                          <td>46%</td>
+                        </tr>
+                        <tr>
+                          <td>Brama</td>
+                          <td>46%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--image source: https://pixabay.com/photos/liverpool-city-centre-merseyside-4612399/-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapse mt-2" data-bs-parent="#collapseGroup" id="collapseConstruction">
+            <div class="card card-body">
+              <h2>Plac budowy</h2>
+              
+              <img src="images/image2_scores.png" alt="Pracownik budowy w żółtym kasku i kamizelce odblaskowej skupiony na swojej pracy na placu budowy. " class="img-fluid w-75">
+              <div class="container mt-4">
+              
+                <div class="row">
+                  <div class="col-sm">
+                    <table class="table w-50">
+                      <tbody>
+                        <tr>
+                          <td><strong>Etykieta</strong></td>
+                          <td><strong>Ufność</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Człowiek <sup>1</sup></td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Kask <sup>2</sup></td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Budowa <sup>3</sup></td>
+                          <td>76%</td>
+                        </tr>
+                        <tr>
+                          <td>Dorosły <sup>4</sup></td>
+                          <td>99%</td>
+                        </tr>
+                        <tr>
+                          <td>Mężczyzna <sup>5</sup></td>
+                          <td>99%</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-sm">
+                    <table class="table w-50">
+                      <tbody>
+                        <tr>
+                          <td><strong>Etykieta</strong></td>
+                          <td><strong>Ufność</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Ciężarówka <sup>6</sup></td>
+                          <td>88%</td>
+                        </tr>
+                        <tr>
+                          <td>Obuwie <sup>7</sup></td>
+                          <td>88%</td>
+                        </tr>
+                        <tr>
+                          <td>Koło <sup>8</sup></td>
+                          <td>83%</td>
+                        </tr>
+                        <tr>
+                          <td>Okulary ochronne</td>
+                          <td>94%</td>
+                        </tr>
+                        <tr>
+                          <td>Znak ostrzegawczy</td>
+                          <td>31%</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--image source: https://pixabay.com/photos/construction-worker-safety-2578410/-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapse mt-2" data-bs-parent="#collapseGroup" id="collapseFruitAndVeg">
+            <div class="card card-body">
+              <h2>Owoce i warzywa</h2>
+              
+              <img src="images/image3_scores.png" alt="Żywy i kolorowy zbiór różnorodnych, świeżych owoców starannie ułożonych w wiklinowym koszu. Kosz zawiera różnorodne owoce, takie jak truskawki, jagody, pomarańcze, winogrona i kiwi. " class="img-fluid w-75">
+              <div class="container mt-4">
+              
+                <div class="row">
+                  <div class="col-sm">
+                    <table class="table w-50">
+                      <tbody>
+                        <tr>
+                          <td><strong>Etykieta</strong></td>
+                          <td><strong>Ufność</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Banan <sup>1</sup></td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Owoc</td>
+                          <td>100%</td>
+                        </tr>
+                        <tr>
+                          <td>Pomarańcza <sup>2</sup></td>
+                          <td>85%</td>
+                        </tr>
+                        <tr>
+                          <td>Gruszka <sup>3</sup></td>
+                          <td>84%</td>
+                        </tr>
+                        <tr>
+                          <td>Kurczak <sup>4</sup></td>
+                          <td>78%</td>
+                        </tr>
+                        <tr>
+                          <td>Cytryna</td>
+                          <td>62%</td>
+                        </tr>
+                        <tr>
+                          <td>Jabłko <sup>5</sup></td>
+                          <td>50%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-sm">
+                    <table class="table w-50">
+                      <tbody>
+                        <tr>
+                          <td><strong>Etykieta</strong></td>
+                          <td><strong>Ufność</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Kosz</td>
+                          <td>55%</td>
+                        </tr>
+                        <tr>
+                          <td>Grejpfrut</td>
+                          <td>53%</td>
+                        </tr>
+                        <tr>
+                          <td>Papryka</td>
+                          <td>53%</td>
+                        </tr>
+                        <tr>
+                          <td>Limonka</td>
+                          <td>52%</td>
+                        </tr>
+                        <tr>
+                          <td>Cukinia</td>
+                          <td>52%</td>
+                        </tr>
+                        <tr>
+                          <td>Imbir</td>
+                          <td>51%</td>
+                        </tr>
+                        <tr>
+                          <td>Awokado</td>
+                          <td>51%</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+               <!--image source: https://pixabay.com/photos/fruit-basket-fresh-food-organic-5789565-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-end mb-1">
+          <a href="#">Powrót do góry</a>
+        </p>
+        <p class="mb-1">Wszystkie obrazy znajdujące się na tej stronie pochodzą z <a href="https://pixabay.com/">Pixabay</a>. </p>
+        <p class="mb-0">Aby uzyskać więcej informacji na temat warunków licencji Pixabay, <a href="https://pixabay.com/service/license/">odwiedź tę stronę</a>.</p>
+        <p class="mb-0">Do sklasyfikowania obiektów na każdym obrazie użyto aplikacji online <a href="https://imagerecognize.com/">IMAGE Recognise</a> </p>
+      </div>
+    </footer>
+  </body>
+</html>
