@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wildfire detection - Experience AI project</title>
+  <style>
+    :root {
+      --bg: #0b0e13;
+      --card: #151a22;
+      --muted: #9aa3b2;
+      --ring: #4f46e5;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      color: var(--bg);
+      font: 15px/1.5 Roboto;
+      padding: 32px;
+    }
+
+    h1 { font-size: 32px; margin: 0 0 18px; font-weight: 700; text-align: center;}
+    h2 { font-size: 28px; margin: 0 0 18px; font-weight: 700; text-align: center;}
+    p.desc { margin: 0 0 22px; color: var(--muted); }
+
+    .layout {
+      display: grid;
+      width: 100%;
+      gap: 24px;
+      padding-bottom: 30px;
+    }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 10px;
+      align-items: start;
+    }
+
+    .card {
+      position: relative;
+      background: var(--card);
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,.35), 0 1px 0 rgba(255,255,255,.03) inset;
+      cursor: grab;
+      user-select: none;
+    }
+    .card:active { cursor: grabbing; }
+
+    .card img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+
+  </style>
+</head>
+<body>
+  <h1>Wildfire detection - Test data</h1>
+  <h2>Wildfire</h2>
+  <div class="layout grid">
+    <div class="card" draggable="true"><img src="" alt="satellite_image_32"/></div>
+    <div class="card" draggable="true"><img src="" alt="satellite_image_33"/></div>
+    <div class="card" draggable="true"><img src="" alt="satellite_image_35"/></div>
+    <div class="card" draggable="true"><img src="" alt="satellite_image_40"/></div>
+    <div class="card" draggable="true"><img src="" alt="satellite_image_43"/></div>
+    <div class="card" draggable="true"><img src="" alt="satellite_image_44"/></div>
+    <div class="card" draggable="true"><img src="" alt="satellite_image_46"/></div> 
+    <div class="card" draggable="true"><img src="" alt="satellite_image_33"/></div>
+  </div>
+
+  <h2>No Wildfire</h2>
+  <div class="layout grid">
+    <div class="card" draggable="true"><img src="" alt="satellite_image_29"/></div>
+    <div class="card" draggable="true"><img src="" alt="satellite_image_30"/></div>
+    <div class="card" draggable="true"><img src="" alt="satellite_image_34"/></div>
+    <div class="card" draggable="true"><img src="" alt="satellite_image_38"/></div>
+    <div class="card" draggable="true"><img src="" alt="satellite_image_39"/></div>
+    <div class="card" draggable="true"><img src="" alt="satellite_image_42"/></div>
+    <div class="card" draggable="true"><img src="" alt="satellite_image_47"/></div>
+    <div class="card" draggable="true"><img src="" alt="satellite_image_26"/></div>
+  </div>
+</body>
+</html>

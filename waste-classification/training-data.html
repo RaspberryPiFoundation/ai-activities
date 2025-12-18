@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wildfire detection - Experience AI project</title>
+  <style>
+    :root {
+      --bg: #0b0e13;
+      --card: #151a22;
+      --muted: #9aa3b2;
+      --ring: #4f46e5;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      color: var(--bg);
+      font: 15px/1.5 Roboto;
+      padding: 32px;
+    }
+
+    h1 { font-size: 32px; margin: 0 0 18px; font-weight: 700; text-align: center;}
+    p.desc { margin: 0 0 22px; color: var(--muted); }
+
+    .layout {
+      display: grid;
+      width: 100%;
+      gap: 24px;
+    }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 10px;
+      align-items: start;
+    }
+
+    .card {
+      position: relative;
+      background: var(--card);
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,.35), 0 1px 0 rgba(255,255,255,.03) inset;
+      cursor: grab;
+      user-select: none;
+    }
+    .card:active { cursor: grabbing; }
+
+    .card img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+
+    .remove-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 30px;
+      height: 30px;
+      border: none;
+      border-radius: 999px;
+      background: rgba(0,0,0,.55);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+      line-height: 1;
+      padding: 0;
+      opacity: 0;
+      transform: scale(.9);
+      transition: opacity .15s ease, transform .15s ease, background .15s ease;
+    }
+    .card:hover .remove-btn,
+    .card:focus-within .remove-btn { opacity: 1; transform: scale(1); }
+    .remove-btn:hover { background: rgba(0,0,0,.75); }
+    .remove-btn:focus-visible {
+      outline: 2px solid white;
+      outline-offset: 2px;
+      box-shadow: 0 0 0 3px color-mix(in oklab, var(--ring), transparent 70%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="layout grid">
+
+    <div class="card" draggable="true"><img src="" alt="non_org_waste01"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="org_waste04"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="non_org_waste02"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="non_org_waste07"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="org_waste02"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="non_org_waste03"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="org_waste01"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="org_waste07"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="org_waste06"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="non_org_waste04"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="non_org_waste05"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="org_waste08"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="non_org_waste06"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="org_waste05"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="org_waste03"/><button class="remove-btn">&times;</button></div>
+    <div class="card" draggable="true"><img src="" alt="non_org_waste08"/><button class="remove-btn">&times;</button></div>
+
+  </div>
+
+  <script>
+    // Base URL for image paths - adjust this as needed
+    const baseURL = 'images/new-training-data/'; // Change to your actual base URL
+
+    document.querySelectorAll('.card img').forEach(img => {
+      const filename = img.alt + '.png';
+      img.src = baseURL + filename;
+    });
+
+
+    document.querySelectorAll('.remove-btn').forEach(btn => {
+        btn.addEventListener('click', e => {
+        e.stopPropagation();
+        e.preventDefault();
+        btn.parentElement.remove();
+      });
+    });
+
+
+    document.querySelectorAll('.card').forEach(card => {
+      const img = card.querySelector('img');
+      card.addEventListener('dragstart', e => {
+        e.dataTransfer.effectAllowed = 'copyMove';
+        e.dataTransfer.setData('text/plain', img.src);
+        try { e.dataTransfer.setDragImage(img, img.naturalWidth/2, img.naturalHeight/2); } catch (_) {}
+      });
+    });
+    
+  </script>
+</body>
+</html>
