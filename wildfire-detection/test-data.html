@@ -81,5 +81,15 @@
     <div class="card" draggable="true"><img src="" alt="satellite_image_47"/></div>
     <div class="card" draggable="true"><img src="" alt="satellite_image_26"/></div>
   </div>
+
+  <script>
+    // Base URL for image paths - adjust this as needed
+    const baseURL = 'images/'; // Change to your actual base URL
+
+    document.querySelectorAll('.card img').forEach(img => {
+      const filename = img.alt + '.png';
+      img.src = baseURL + filename;
+    });
+  </script>
 </body>
 </html>
