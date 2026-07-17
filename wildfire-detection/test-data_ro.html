@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detectarea incendiilor de vegetație - proiect Experience AI</title>
+  <style>
+    :root {
+      --bg: #0b0e13;
+      --card: #151a22;
+      --muted: #9aa3b2;
+      --ring: #4f46e5;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      color: var(--bg);
+      font: 15px/1.5 Roboto;
+      padding: 32px;
+    }
+
+    h1 { font-size: 32px; margin: 0 0 18px; font-weight: 700; text-align: center;}
+    h2 { font-size: 28px; margin: 0 0 18px; font-weight: 700; text-align: center;}
+    p.desc { margin: 0 0 22px; color: var(--muted); }
+
+    .layout {
+      display: grid;
+      width: 100%;
+      gap: 24px;
+      padding-bottom: 30px;
+    }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 10px;
+      align-items: start;
+    }
+
+    .card {
+      position: relative;
+      background: var(--card);
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,.35), 0 1px 0 rgba(255,255,255,.03) inset;
+      cursor: grab;
+      user-select: none;
+    }
+    .card:active { cursor: grabbing; }
+
+    .card img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+
+  </style>
+</head>
+<body>
+  <h1>Detectarea incendiilor de vegetație - Date de testare</h1>
+  <h2>Incendiu de vegetație</h2>
+  <div class="layout grid">
+    <div class="card" draggable="true"><img src="" alt="new_satellite_1"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_2"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_3"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_4"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_5"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_6"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_7"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_7a"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_7b"/></div>
+  </div>
+
+  <h2>Fără incendiu de vegetație</h2>
+  <div class="layout grid">
+    <div class="card" draggable="true"><img src="" alt="new_satellite_8"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_9"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_10"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_11"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_12"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_13"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_14"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_15"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_16"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_17"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_18"/></div>
+    <div class="card" draggable="true"><img src="" alt="new_satellite_19"/></div>
+
+
+  
+   
+  </div>
+
+  <script>
+    // Base URL for image paths - adjust this as needed
+    const baseURL = 'images/'; // Change to your actual base URL
+
+    document.querySelectorAll('.card img').forEach(img => {
+      const filename = img.alt + '.png';
+      img.src = baseURL + filename;
+    });
+  </script>
+</body>
+</html>
